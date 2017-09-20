@@ -24,6 +24,11 @@ First cd into the directory and run
 npm install
 ```
 
+You'll need to build the application run
+```
+npm run build
+```
+
 Then start the desktop electron application using 
 
 ```
