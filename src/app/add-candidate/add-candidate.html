@@ -1,0 +1,38 @@
+<ion-header>
+  <img id="header-image" src="./assets/images/header.png">
+</ion-header>
+
+<ion-content>
+  <div class="wr-well">
+    <button ion-button id="back-button" (click)="gotoBack()"><ion-icon name="arrow-round-back"></ion-icon></button>
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input [(ngModel)]="cName" type="text" placeholder="e.g. John Doe"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Speaks English?</ion-label>
+        <ion-toggle [(ngModel)]="speaksEnglish"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Relevant Degree</ion-label>
+        <ion-toggle [(ngModel)]="hasDegree"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <div id="input-label">Personal Impression (1-10):</div>
+        <div id="input-parameter"><input [(ngModel)]="pRating" type="number" min="1" max="10"></div>
+      </ion-item>
+      <ion-item>
+        <div id="input-label">Technical Prowess (1-10):</div>
+        <div id="input-parameter"><input [(ngModel)]="tRating" type="number" min="1" max="10"></div>
+      </ion-item>
+      <ion-list-header  *ngIf="edit">
+      <button id="delete-button" (click)="deleteClicked()" ion-fab item-end><ion-icon name="remove-circle"></ion-icon></button>
+      <h1 id="delete-prompt">Delete?</h1>
+      </ion-list-header>
+    </ion-list>
+    <button *ngIf="!edit" id="submit-button" (click)="submitForm()" ion-button round>Add Candidate</button>
+    <button *ngIf="edit" id="submit-button" (click)="submitForm()" ion-button round>Save Edit</button>
+
+  </div>
+</ion-content>

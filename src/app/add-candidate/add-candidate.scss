@@ -1,0 +1,31 @@
+page-add-candidate {
+  ion-content {
+    background: url(../assets/images/space-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    }
+    #header-image {
+      display: block;
+      margin: auto;
+    }
+    #input-label {
+      float: left;
+    }
+    #input-parameter {
+      float:right;
+    }
+    #back-button {
+      float: left;
+      background-color: rgba(255, 255, 255, .7);
+      color: black;
+    }
+    #submit-button{
+      background-color: rgba(255, 255, 255, .7);
+      color: black;
+    }
+    #delete-button{
+      background-color: red;
+    }
+    #delete-prompt{
+      text-align: right;
+    }
+}

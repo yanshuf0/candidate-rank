@@ -1,0 +1,53 @@
+<ion-header>
+  <img id="header-image" src="./assets/images/header.png">
+</ion-header>
+<ion-content>
+  <div class="wr-well">
+    <ion-list>
+      <ion-list-header class="tier-header">
+        <h1>Top Tier Candidates</h1>
+      </ion-list-header>
+      <ion-item *ngFor="let tCandidate of tCandidates" (click)="gotoEdit(tCandidate)">
+        <ion-icon name='person' item-start></ion-icon>
+        <h3>{{tCandidate.Name}}</h3>
+        <p *ngIf="tCandidate.English"> - English Speaker</p>
+        <p *ngIf="tCandidate.Degree"> - College Educated</p>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+      <ion-list-header class="tier-header">
+        <h1>Mid Tier Candidates</h1>
+      </ion-list-header>
+      <ion-item *ngFor="let mCandidate of mCandidates" (click)="gotoEdit(mCandidate)">
+        <ion-icon name='person' item-start></ion-icon>
+        <h3>{{mCandidate.Name}}</h3>
+        <p *ngIf="mCandidate.English"> - English Speaker</p>
+        <p *ngIf="mCandidate.Degree"> - College Educated</p>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+      <ion-list-header class="tier-header">
+        <h1>Bottom Tier Candidates</h1>
+      </ion-list-header>
+      <ion-item *ngFor="let bCandidate of bCandidates" (click)="gotoEdit(bCandidate)">
+        <ion-icon name='person' item-start></ion-icon>
+        <h3>{{bCandidate.Name}}</h3>
+        <p *ngIf="bCandidate.English"> - English Speaker</p>
+        <p *ngIf="bCandidate.Degree"> - College Educated</p>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 offset-3>
+          <ion-card>
+            <ion-card-content id="add-card" (click)="gotoAddCandidate()">
+              <h2>Add a new candidate</h2>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
