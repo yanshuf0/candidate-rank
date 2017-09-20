@@ -1,23 +1,61 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Candidate Rank
 
-## How to use this template
+This is a template application by which a hiring manager would be able to answer a series of questions about potential candidates and have the program automatically place candidates into groups based upon a formula that calculates various traits in an individual. This is an alpha and the traits are limited and the scoring system is a bit arbitrary. This application was build in the Ionic 3 framework and ported to a desktop application using Github's electron framework.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## Getting Started
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+Clone the repository or download a zip onto your computer to get started. To see the app in action, releases are also availabe
 
-### With the Ionic CLI:
+### Prerequisites
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+Running this application in development will require the node.js with the Node Package Manager. You will also need to install ionic cli
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+```
+npm install -g ionic
 ```
 
-Then, to run it, cd into `myBlank` and run:
+### Installing
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+To get up and running is simple!
+
+First cd into the directory and run
+
 ```
+npm install
+```
+
+Then start the desktop electron application using 
+
+```
+npm start
+```
+
+You can enter candidates and answer some questions and assessments about them and the app will rank them based on qualifications so you don't have to keep so much in your mind at once.
+
+## Tests
+
+Given the time limit was 4 hours I was unable to set up unit tests but those will be integrated in the next commit.
+
+## Built With
+
+* [Ionic](https://ionicframework.com/) - The development framework used.
+* [Electron](https://electron.atom.io/docs/tutorial/quick-start/) - Used to launch as Desktop application.
+* [.NET WebApi](https://www.asp.net/web-api) - Used to create the database and api to handle the CRUD operations.
+
+## Contributing
+
+Go ahead...
+
+## Authors
+
+* **Zachary Schwartz** - *Initial work*
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
